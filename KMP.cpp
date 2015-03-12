@@ -6,15 +6,21 @@ vector<int> pie;
 
 void createPie(string p){
     int m = p.length();
-    pie.assign(m, 0);
-    int k = 0;
+    pie.assign(m,0);
     pie[0] = 0;
-    for(int q=1; q<m; q++){
-        while(k>0 && p[k]!=p[q])
+    int i=1 ;
+    while(p[0]== p[i] && i<m){
+        pie[i] = i;
+        i++;
+    }
+    int k= 0;
+    for( ; i<m ;i++){
+        while(k>0 && p[k]!= p[i]){
             k = pie[k];
-        if(p[k] == p[q])
+        }
+        if(p[k]== p[i])
             k++;
-        pie[q] = k;
+        pie[i] = k;
     }
     for(int i=1; i<m; i++) if(pie[i]>0) pie[i]--;
 }
