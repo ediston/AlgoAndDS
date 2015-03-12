@@ -17,8 +17,8 @@ void process2( )
       for (i = 0; i < N; i++)
           M[i][0] = i;
   //compute values from smaller to bigger intervals
-      for (j = 1; 1 << j <= N; j++)
-          for (i = 0; i + (1 << j) - 1 < N; i++)
+      for (j = 1; 1 << j <= N; j++) // till 2^j 
+          for (i = 0; i + (1 << j) - 1 < N; i++)  // till N -(2^j -1)
               if (A[M[i][j - 1]] < A[M[i + (1 << (j - 1))][j - 1]])
                   M[i][j] = M[i][j - 1];
               else
