@@ -9,7 +9,7 @@ int n;
 vector <int> st, A;
 
 long long left(long long p) {return p <<1;}
-long long right(long long  p){return p >>1;}
+long long right(long long  p){return (p << 1) + 1;}
 
 void build(int p, int L, int R) { // O(n)
     if (L == R) // as L == R, either one is fine
