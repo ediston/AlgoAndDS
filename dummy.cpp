@@ -19,9 +19,7 @@
 #include <cstdlib>
 #include <ctime>
 
-#define PROG ""
-#define INFILE PROG "in"
-#define OUTFILE PROG "out"
+#define PB(x) push_back(x)
 #define fp(i,f,t) for(int i=f; i<t; i++)
 #define fm(i,f,t) for(int i=f; i>t; i--)
 #define MP(x,y) make_pair(x,y)
