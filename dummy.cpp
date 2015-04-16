@@ -4,6 +4,7 @@
 #include <list>
 #include <map>
 #include <set>
+#include <queue>
 #include <deque>
 #include <stack>
 #include <bitset>
