@@ -9,11 +9,11 @@ long init(long i, long l, long h, long *arr){
     return arr[i];
 }
 
-void update(long i, long ui, long l, long h, long *arr){
+void update(long i, long ui, long l, long h, long *arr, long diff){
     if(ui<l || ui > h){
         return;
     }
-    arr[i]++;
+    arr[i]+=diff;
     if(l==h) return;
     update(2*i,   ui, l, (l+h)/2 , arr);
     update(2*i+1, ui, (l+h)/2+1, h , arr);
