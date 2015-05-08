@@ -9,9 +9,9 @@ using namespace std;
 
 
 int main() {
-    int t=0;
+    long t=0;
     cin >> t;
-    for(int _case=1; _case<=t; _case++){
+    for(long _case=1; _case<=t; _case++){
         cout << "Case #"<< _case <<": " ;
     
     }
